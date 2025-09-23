@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dulce Tentación — Postres frescos: mango biche, frutas con chocolate y fresas con crema</title>
+  <meta name="description" content="Emprendimiento de postres artesanales: mango biche, fresas con crema y frutas con chocolate. Domicilios, eventos y combos semanales." />
+  <meta property="og:title" content="Dulce Tentación — Postres frescos" />
+  <meta property="og:description" content="Mango biche, frutas con chocolate y fresas con crema. ¡Endulza tu día con nosotros!" />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#4CAF50" />
+  <style>
+    :root{
+      --verde:#4CAF50;/*verde limón suave*/
+      --rojo:#E91E63;/*fresa*/
+      --marron:#795548;/*chocolate*/
+      --amarillo:#FFC107;/*mango*/
+      --oscuro:#1a1a1a;
+      --gris:#6b7280;
+      --claro:#ffffff;
+      --bg:#fffefb;
+      --radius:18px;
+      --shadow:0 10px 25px rgba(0,0,0,.08);
+    }
+    html{scroll-behavior:smooth}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,"Noto Sans",sans-serif;line-height:1.6;background:var(--bg);color:#222}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    .container{width:min(1100px,92%);margin-inline:auto}
+    /* Header */
+    .header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.85);backdrop-filter:saturate(180%) blur(12px);border-bottom:1px solid #eee}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+    .brand{display:flex;gap:10px;align-items:center;font-weight:800}
+    .brand .logo{width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg,var(--rojo),var(--amarillo));display:grid;place-items:center;color:#fff;box-shadow:var(--shadow)}
+    .menu{display:flex;gap:20px;align-items:center}
+    .menu a{padding:8px 12px;border-radius:10px;color:#333;font-weight:600}
+    .menu a:hover{background:#f7f7f7}
+    .burger{display:none;border:0;background:transparent}
+    @media (max-width:860px){.menu{display:none}.burger{display:block}}
+    /* Hero */
+    .hero{position:relative;overflow:hidden}
+    .hero-wrap{display:grid;grid-template-columns:1.2fr 1fr;gap:36px;align-items:center;padding:64px 0}
+    .badge{display:inline-flex;align-items:center;gap:8px;padding:6px 10px;border-radius:999px;background:rgba(76,175,80,.12);color:var(--verde);font-weight:700}
+    .title{font-size:clamp(28px,5vw,48px);line-height:1.15;margin:14px 0 10px}
+    .subtitle{color:var(--gris);font-size:18px}
+    .cta{display:flex;gap:12px;align-items:center;margin-top:22px;flex-wrap:wrap}
+    .btn{padding:12px 18px;border-radius:12px;font-weight:800;display:inline-flex;align-items:center;gap:10px;box-shadow:var(--shadow)}
+    .btn-primary{background:linear-gradient(135deg,var(--verde),#3aa64a);color:#fff}
+    .btn-ghost{background:#fff;border:2px solid #eee}
+    .hero-card{background:linear-gradient(180deg,#fff, #fffaf4);border:1px solid #f2eae2;padding:16px;border-radius:20px;box-shadow:var(--shadow);display:grid;gap:12px}
+    .hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .pill{position:absolute;inset:auto -80px -90px auto;width:380px;height:380px;border-radius:50%;background:radial-gradient(closest-side,#ffe6a7,rgba(255,255,255,0));filter:blur(10px);opacity:.6;pointer-events:none}
+    @media (max-width:860px){.hero-wrap{grid-template-columns:1fr}.hero-card{order:2}.pill{display:none}}
+    /* Section */
+    section{padding:56px 0}
+    .section-title{font-size: clamp(22px,3.4vw,34px);margin:0 0 6px}
+    .section-desc{color:var(--gris);margin:0 0 28px}
+    .grid{display:grid;gap:20px}
+    .grid-3{grid-template-columns:repeat(3,1fr)}
+    .grid-2{grid-template-columns:repeat(2,1fr)}
+    @media (max-width:860px){.grid-3,.grid-2{grid-template-columns:1fr}}
+    .card{background:#fff;border:1px solid #eee;border-radius:var(--radius);padding:20px;box-shadow:var(--shadow)}
+    .chip{display:inline-flex;align-items:center;gap:8px;background:#f7f7f7;border-radius:999px;padding:8px 12px;font-weight:700}
+    .icon{width:22px;height:22px}
+    /* Pricing/finanzas */
+    .price{font-size:28px;font-weight:900;color:var(--marron)}
+    .price small{color:var(--gris);font-weight:600}
+    .list{padding-left:18px}
+    .list li{margin:8px 0}
+    /* Footer */
+    footer{background:#0f172a;color:#e5e7eb;padding:36px 0;margin-top:30px}
+    footer a{color:#e5e7eb}
+    .footer-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:20px}
+    @media (max-width:860px){.footer-grid{grid-template-columns:1fr}}
+    .whatsapp-floating{position:fixed;right:16px;bottom:16px;background:#25D366;color:#fff;border-radius:999px;padding:12px 16px;display:flex;align-items:center;gap:8px;box-shadow:var(--shadow)}
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container nav">
+      <a class="brand" href="#inicio" aria-label="Dulce Tentación">
+        <span class="logo">🍓</span>
+        <span>Dulce Tentación</span>
+      </a>
+      <nav class="menu" id="menu">
+        <a href="#productos">Productos</a>
+        <a href="#nosotros">Misión & Visión</a>
+        <a href="#ventajas">Ventajas</a>
+        <a href="#finanzas">Finanzas</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <button class="burger" id="burger" aria-label="Abrir menú">☰</button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="inicio" class="hero">
+    <div class="pill"></div>
+    <div class="container hero-wrap">
+      <div>
+        <span class="badge">Nuevo · Envíos en tu zona</span>
+        <h1 class="title">Postres frescos y artesanales: <span style="color:var(--rojo)">fresas con crema</span>, <span style="color:var(--marron)">frutas con chocolate</span> y <span style="color:var(--amarillo)">mango biche</span>.</h1>
+        <p class="subtitle">Ingredientes de calidad, atención rápida y combinaciones irresistibles. ¡Endulza tu día con nosotros!</p>
+        <div class="cta">
+          <a class="btn btn-primary" href="https://wa.me/573000000000?text=Hola%20Dulce%20Tentaci%C3%B3n%2C%20quiero%20hacer%20un%20pedido" target="_blank" rel="noopener">Pedir por WhatsApp</a>
+          <a class="btn btn-ghost" href="#productos">Ver menú</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="hero-grid">
+          <div class="card">
+            <strong>🥭 Mango biche</strong>
+            <p>Con limón, sal, tajín o leche condensada. Refrescante y adictivo.</p>
+          </div>
+          <div class="card">
+            <strong>🍓 Fresas con crema</strong>
+            <p>Cremosas, con toppings a elección: granola, chispas, coco y más.</p>
+          </div>
+        </div>
+        <div class="card">
+          <strong>🍫 Frutas con chocolate</strong>
+          <p>Uvas, banano y fresa bañadas en chocolate. Opción blanco o semiamargo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Productos -->
+  <section id="productos">
+    <div class="container">
+      <h2 class="section-title">Productos y Servicios</h2>
+      <p class="section-desc">Postres listos para antojarte y opciones para eventos.</p>
+      <div class="grid grid-3">
+        <article class="card">
+          <div class="chip">🥭 Mango biche</div>
+          <p>Con limón, sal, tajín o leche condensada. Porción individual o familiar.</p>
+        </article>
+        <article class="card">
+          <div class="chip">🍓 Fresas con crema</div>
+          <p>Base de crema fresca, toppings a elección: granola, chispas, coco, nuez.</p>
+        </article>
+        <article class="card">
+          <div class="chip">🍫 Frutas con chocolate</div>
+          <p>Uvas, banano y fresas cubiertas. Elige chocolate blanco o semiamargo.</p>
+        </article>
+      </div>
+      <div class="grid grid-2" style="margin-top:18px">
+        <article class="card">
+          <div class="chip">🎉 Eventos</div>
+          <p>Montaje de mesa dulce, empaques personalizados y combos corporativos.</p>
+        </article>
+        <article class="card">
+          <div class="chip">🚚 Domicilios</div>
+          <p>Entrega rápida en tu zona. Pedidos por WhatsApp con seguimiento.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Nosotros (Misión & Visión) -->
+  <section id="nosotros">
+    <div class="container">
+      <h2 class="section-title">Misión & Visión</h2>
+      <div class="grid grid-2">
+        <div class="card">
+          <h3>Misión</h3>
+          <p>Ofrecer postres frescos, innovadores y de alta calidad que endulcen los momentos de nuestros clientes, brindando experiencias únicas con ingredientes naturales y un servicio cercano y amigable.</p>
+        </div>
+        <div class="card">
+          <h3>Visión</h3>
+          <p>Ser el emprendimiento líder de postres artesanales en la ciudad, reconocido por la frescura de sus productos, la innovación en sabores y la creación de momentos dulces que unan a las personas.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ventajas -->
+  <section id="ventajas">
+    <div class="container">
+      <h2 class="section-title">¿Por qué elegirnos?</h2>
+      <p class="section-desc">Ventajas competitivas que nos hacen únicos.</p>
+      <div class="grid grid-3">
+        <div class="card"><strong>✅ Ingredientes frescos</strong><p>Seleccionados a diario para asegurar sabor y calidad.</p></div>
+        <div class="card"><strong>✅ Recetas irresistibles</strong><p>Toque casero con combinaciones modernas.</p></div>
+        <div class="card"><strong>✅ Atención rápida</strong><p>Pedidos por WhatsApp, confirmación y seguimiento.</p></div>
+        <div class="card"><strong>✅ Precio justo</strong><p>Excelente relación calidad–cantidad.</p></div>
+        <div class="card"><strong>✅ Personalización</strong><p>Toppings y empaques a tu gusto.</p></div>
+        <div class="card"><strong>✅ Para eventos</strong><p>Opciones para celebraciones y empresas.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Finanzas / Precios de referencia -->
+  <section id="finanzas">
+    <div class="container">
+      <h2 class="section-title">Finanzas & Precios de referencia</h2>
+      <p class="section-desc">Modelo sostenible basado en rotación y calidad.</p>
+      <div class="grid grid-3">
+        <div class="card">
+          <div class="price">$10.000 <small>porción</small></div>
+          <p><strong>Mango biche</strong> — individual. Opcionales: tajín o leche condensada.</p>
+        </div>
+        <div class="card">
+          <div class="price">$14.000 <small>porción</small></div>
+          <p><strong>Fresas con crema</strong> — incluye 1 topping. Extra +$2.000.</p>
+        </div>
+        <div class="card">
+          <div class="price">$15.000 <small>bandeja</small></div>
+          <p><strong>Frutas con chocolate</strong> — blanco o semiamargo.</p>
+        </div>
+      </div>
+      <div class="card" style="margin-top:18px">
+        <ul class="list">
+          <li>Margen estimado: <strong>30–40% por producto</strong>.</li>
+          <li>Reinversión mensual para ampliar variedad y cobertura.</li>
+          <li>Promos semanales para aumentar volumen y fidelización.</li>
+        </ul>
+      </div>
+      <p class="section-desc" style="margin-top:12px">*Los precios son de referencia; ajusta a tu zona y costos reales.</p>
+    </div>
+  </section>
+
+  <!-- Contacto -->
+  <section id="contacto">
+    <div class="container">
+      <h2 class="section-title">Contacto</h2>
+      <div class="grid grid-2">
+        <form class="card" onsubmit="sendWhatsApp(event)">
+          <label>Nombre<br><input required name="nombre" style="width:100%;padding:12px;border-radius:12px;border:1px solid #e5e7eb"></label><br>
+          <label>Pedido o consulta<br><textarea required name="mensaje" rows="5" style="width:100%;padding:12px;border-radius:12px;border:1px solid #e5e7eb"></textarea></label>
+          <button class="btn btn-primary" type="submit">Enviar por WhatsApp</button>
+        </form>
+        <div class="card">
+          <h3>Dulce Tentación</h3>
+          <p>📍 Dirección: (tu dirección/local)
+          <br>📲 Instagram/Facebook: @DulceTentacion
+          <br>📱 WhatsApp: +57 300 000 0000</p>
+          <p>Horario: Lun–Dom 11:00–20:00</p>
+          <a class="btn btn-ghost" style="margin-top:6px" href="https://wa.me/573000000000" target="_blank" rel="noopener">Abrir chat</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <div class="brand"><span class="logo">🍓</span><span>Dulce Tentación</span></div>
+        <p style="color:#cbd5e1">Postres frescos y artesanales: mango biche, frutas con chocolate y fresas con crema.</p>
+      </div>
+      <div>
+        <strong>Secciones</strong>
+        <ul style="list-style:none;padding:0;margin:8px 0;color:#cbd5e1">
+          <li><a href="#productos">Productos</a></li>
+          <li><a href="#nosotros">Misión & Visión</a></li>
+          <li><a href="#ventajas">Ventajas</a></li>
+          <li><a href="#finanzas">Finanzas</a></li>
+        </ul>
+      </div>
+      <div>
+        <strong>Contacto</strong>
+        <p style="color:#cbd5e1">WhatsApp: +57 300 000 0000<br>IG: @DulceTentacion</p>
+      </div>
+    </div>
+  </footer>
+
+  <a class="whatsapp-floating" href="https://wa.me/573000000000?text=Hola%20Dulce%20Tentaci%C3%B3n" target="_blank" rel="noopener" aria-label="Chat por WhatsApp">
+    <span>🟢</span><strong>WhatsApp</strong>
+  </a>
+
+  <script>
+    // Mobile menu
+    const burger=document.getElementById('burger');
+    const menu=document.getElementById('menu');
+    burger?.addEventListener('click',()=>{
+      const open=menu.style.display==='flex';
+      menu.style.display=open?'none':'flex';
+      menu.style.flexDirection='column';
+      menu.style.gap='10px';
+      menu.style.position='absolute';
+      menu.style.right='16px';
+      menu.style.top='58px';
+      menu.style.background='#ffffff';
+      menu.style.padding='12px';
+      menu.style.border='1px solid #eee';
+      menu.style.borderRadius='12px';
+      menu.style.boxShadow='0 10px 25px rgba(0,0,0,.08)';
+    });
+
+    // Contacto → WhatsApp
+    function sendWhatsApp(e){
+      e.preventDefault();
+      const f=e.target; 
+      const nombre=encodeURIComponent(f.nombre.value.trim());
+      const mensaje=encodeURIComponent(f.mensaje.value.trim());
+      const phone='573000000000'; // ← Reemplaza con tu número real sin signos
+      const url=`https://wa.me/${phone}?text=Hola,%20soy%20${nombre}.%20${mensaje}`;
+      window.open(url,'_blank');
+    }
+  </script>
+</body>
+</html>
